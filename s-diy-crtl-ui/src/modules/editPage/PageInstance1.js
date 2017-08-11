@@ -1,3 +1,4 @@
+//考虑到css样式问题 无法实现版本机制，所以组件没有版本
 let pageInstance1 = {
     widgetInstances: [{
         instanceId: 'widget1-instance1',//widget实例标志
