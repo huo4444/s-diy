@@ -14,6 +14,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 // import TestWidgetContainer from './widgets/TestWidgetContainer'
 import TestWidget from "./widgets/Widget1/TestWidget";
 import TestWidgetEditor from "./widgets/Widget1/TestWidgetEditor"
+
 export default class EditPage extends React.Component{
     constructor(props){
         super(props);
@@ -53,6 +54,14 @@ export default class EditPage extends React.Component{
             // {i: 'g', x: 4, y: 0, w: 1, h: 2}
         ];
         let eventHandlers={onMouseEnter:this.onMouseEnter, onMouseOut:this.onMouseOut}
+
+
+                // let c=[];
+                // for(let i=0;i<100;i++){
+                //     c.push( <TestWidget key={"t"+i} style={{backgroundColor:"#fee"}}>
+                //         <TestWidgetEditor  />
+                //     </TestWidget>)
+                // }
         return <div>
             {/*<Affix offsetTop={120} onChange={affixed => console.log(affixed)}>*/}
                 {/*<Button>120px to affix top</Button>*/}
@@ -108,6 +117,10 @@ export default class EditPage extends React.Component{
                         <TestWidget key="4" style={{backgroundColor:"#fee"}}>
                             <TestWidgetEditor  />
                         </TestWidget>
+                        <TestWidget key="5" style={{backgroundColor:"#fee"}}>
+                            <TestWidgetEditor  />
+                        </TestWidget>
+                        {/*{c}*/}
                     </ResponsiveReactGridLayout>
                 </Col>
 

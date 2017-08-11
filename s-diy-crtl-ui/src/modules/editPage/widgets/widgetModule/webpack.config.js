@@ -5,35 +5,17 @@ const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-module.exports =[{
-    //dll
-    name:"vendor",
-    context: __dirname,
-    entry:['react', 'react-dom', 'react-router','react-router-dom','scriptjs','whatwg-fetch'],
-    output: {
-        filename: "vendor_lib.js", // best use [hash] here too
-        path: path.resolve(__dirname, "dll"),
-        library: "vendor_lib_[hash]",
-    },
-    plugins: [
-        new webpack.DllPlugin({
-            name: "vendor_lib_[hash]",
-            path: path.resolve(__dirname, "dll/vendor-manifest.json"),
-        }),
-    ]
-},
+module.exports =[
     {//app
-        name:"app",
-        dependencies: ["vendor"],
+        name:"widget1",
     entry: {
-        app: './src/app.js',
-        // vendor: ['react', 'react-dom', 'react-router','react-router-dom','scriptjs','whatwg-fetch']
+        widget1: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, '../s-diy-crtl/public/pc/dist'),
+        path: path.resolve(__dirname, './dist'),
         // filename: "bundle-[name]-[hash:5].js",
         filename: "bundle-[name].js",
-        publicPath: '/pc/dist/',
+        // publicPath: '/pc/dist/',
         chunkFilename: "bundle-[name]-[hash:5].js"
     },
     module: {
@@ -46,7 +28,7 @@ module.exports =[{
     },
     plugins: [
         new webpack.DllReferencePlugin({
-            manifest: path.resolve(__dirname, "dll/vendor-manifest.json")
+            manifest: path.resolve(__dirname, "../../../../../dll/vendor-manifest.json")
         }),
         new CommonsChunkPlugin({
             // The order of this array matters
