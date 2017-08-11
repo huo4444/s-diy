@@ -8,11 +8,11 @@ import CounterUI from './ui/CounterUI'
 
 
 export  default class Counter extends  React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
     render(){
-        return <CounterUI></CounterUI>
+        return <CounterUI {...this.props} ></CounterUI>
     }
 }
 

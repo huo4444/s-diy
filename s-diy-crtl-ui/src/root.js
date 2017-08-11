@@ -14,7 +14,6 @@ const { Header, Content, Footer } = Layout;
 import routes from './routes'
 import AsyncComponent from './AsyncComponent'
 import './route.less'
-import DevTools from './modules/aboutPage/reduxComponent/DevTools'
 
 const Root = () => <HashRouter >
     <Layout className="layout">
@@ -44,7 +43,7 @@ const Root = () => <HashRouter >
                     }} />
                 ))}
             </div>
-            {/*<DevTools></DevTools>*/}
+
         </Content>
         <Footer style={{ textAlign: 'center' }}>
             webSite ©2017 Created by <i className="iconfont icon-huo" style={{fontSize:"12px"}} ></i>
