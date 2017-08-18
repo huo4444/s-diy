@@ -82,8 +82,7 @@ const  HOC=(widgetId)=>function HOCfunction(WrappedComponent) {
                     let newChildren=[];
                     React.Children.forEach(this.props.children,function (element) {
                         // console.log(typeof element.type==='function')
-                        // console.log(element.type.name )
-                        if(typeof element.type==='function'&&element.type.name==='EditorPP'){
+                        if(element&&typeof element.type==='function'&&element.type.name==='EditorPP'){
                             editorContent=React.cloneElement(element)
                         }else{
                             newChildren.push(element)
@@ -101,7 +100,7 @@ const  HOC=(widgetId)=>function HOCfunction(WrappedComponent) {
                 >
                     {editorContent}
                 </Modal>
-                    console.log(this.props)
+                    // console.log(this.props)
                     return <Provider store={this.store}><Popover content={content} placement="topLeft"  trigger="hover">
                         <div {...this.props} style={newStyle} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseOut}  >
                         <WrappedComponent {...rest}  />

@@ -9,7 +9,14 @@ module.exports =[{
     //dll
     name:"vendor",
     context: __dirname,
-    entry:['react', 'react-dom', 'react-router','react-router-dom','scriptjs','whatwg-fetch'],
+    entry:['react', 'react-dom', 'react-router','react-router-dom','scriptjs','whatwg-fetch'
+        // './src/modules/editPage/widgets/HOCTest.edit',
+        // './src/modules/editPage/widgets/HOCTest',
+        // './src/modules/editPage/widgets/HOCTest2.edit',
+        // './src/modules/editPage/widgets/HOCTest2',
+        // './src/modules/editPage/widgets/HOCTest2Editor.edit',
+        // './src/modules/editPage/widgets/HOCTestEditor.edit'
+    ],
     output: {
         filename: "vendor_lib.js", // best use [hash] here too
         path: path.resolve(__dirname, "dll"),
@@ -57,8 +64,8 @@ module.exports =[{
             // filename: 'bundle-[name]-[hash:5].css', disable: false, allChunks: true
             filename: 'bundle-[name].css', disable: false, allChunks: true
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: { warnings: false }
+        // }),
     ],
 }]

@@ -14,7 +14,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 // import TestWidgetContainer from './widgets/TestWidgetContainer'
 import TestWidget from "./widgets/Widget1/TestWidget";
 import TestWidgetEditor from "./widgets/Widget1/TestWidgetEditor"
-
+import WidgetPlaceholder from './widgets/WidgetPlaceholder'
 export default class EditPage extends React.Component{
     constructor(props){
         super(props);
@@ -81,45 +81,48 @@ export default class EditPage extends React.Component{
                         <TestWidget key="a" style={{backgroundColor:"#fee"}}>
                             <TestWidgetEditor />
                         </TestWidget>
-                        <TestWidget key="b" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="c" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="d" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="e" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="f" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="g" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="h" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="i" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="1" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="2" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="3" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="4" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
-                        <TestWidget key="5" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor  />
-                        </TestWidget>
+                        {/*<TestWidget key="b" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="c" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="d" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="e" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="f" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="g" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="h" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="i" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="1" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="2" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="3" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="4" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+                        {/*<TestWidget key="5" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor  />*/}
+                        {/*</TestWidget>*/}
+
+                        <WidgetPlaceholder key="6"></WidgetPlaceholder>
+
                         {/*{c}*/}
                     </ResponsiveReactGridLayout>
                 </Col>

@@ -7,9 +7,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports =[
     {//app
-        name:"widget1",
+        name:"widget12",
     entry: {
-        widget1: './src/index.js'
+        widget12: './src/widget/index.js',
+        widget12editor: './src/editor/index.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -27,20 +28,21 @@ module.exports =[
             ]
     },
     plugins: [
+
         new webpack.DllReferencePlugin({
             manifest: path.resolve(__dirname, "../../../../../dll/vendor-manifest.json")
         }),
-        new CommonsChunkPlugin({
-            // The order of this array matters
-            names: ["common"],
-            minChunks: 2
-        }),
+        // new CommonsChunkPlugin({
+        //     // The order of this array matters
+        //     names: ["common"],
+        //     minChunks: 2
+        // }),
         new ExtractTextPlugin({
             // filename: 'bundle-[name]-[hash:5].css', disable: false, allChunks: true
             filename: 'bundle-[name].css', disable: false, allChunks: true
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false }
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: { warnings: false }
+        // }),
     ],
 }]
