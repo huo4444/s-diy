@@ -46,6 +46,7 @@
     "history": "^4.6.3",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
+    "rax": "^0.4.10",
     "rc-overlay": "^1.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
