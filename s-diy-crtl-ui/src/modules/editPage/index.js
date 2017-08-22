@@ -78,9 +78,9 @@ export default class EditPage extends React.Component{
                                                //width={1200}//当没使用HOC Provider时别需设置
                     >
 
-                        <TestWidget key="a" style={{backgroundColor:"#fee"}}>
-                            <TestWidgetEditor />
-                        </TestWidget>
+                        {/*<TestWidget key="a" style={{backgroundColor:"#fee"}}>*/}
+                            {/*<TestWidgetEditor />*/}
+                        {/*</TestWidget>*/}
                         {/*<TestWidget key="b" style={{backgroundColor:"#fee"}}>*/}
                             {/*<TestWidgetEditor  />*/}
                         {/*</TestWidget>*/}

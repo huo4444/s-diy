@@ -21,17 +21,19 @@ export  class WidgetPlaceholder extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            widgetComponent:TestWidget
+            widgetComponent:undefined
         }
         loadWidget(this.props.widgetId,this.updateWidgetComponent);
 
     }
     updateWidgetComponent=(widgetComponent)=>{
-        // this.setState({widgetComponent:widgetComponent});
+        this.setState({widgetComponent:widgetComponent});
     }
     render(){
+        console.log(this.state.widgetComponent);
         let {widgetComponent}=this.state;
         if(widgetComponent){
+            console.log("----------")
             return <widgetComponent {...this.props}></widgetComponent>
         }else{
             return <div {...this.props}>loading</div>

@@ -11,6 +11,7 @@ export function loadWidget(widgetId,callback) {
         $script.ready(['widget','widgetEditor'], function (deps, ready, req) {
             let widget=window["widget12"]
             let widgetEditor=window["widget12editor"]
+            console.log(widget)
             console.log(widgetEditor);
             localWidget=widget;
             widget_repos[widgetId]=localWidget;
