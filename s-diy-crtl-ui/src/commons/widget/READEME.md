@@ -1,0 +1,2 @@
+design:layout+widgetplaceholder+widgetRepo+DynamicLoadWidgetJs
+render:layout+widgetplaceholder+widgetRepo+contractedtaticWidgetJs=>staticPage
